@@ -1,0 +1,43 @@
+import { Ticket, TicketPriority, TicketStatus } from '../types/Ticket';
+
+export const mockTickets: Ticket[] = [
+  {
+    id: 1,
+    userId: 1,
+    engagementId: 1,
+    subject: 'Login issue',
+    description: 'User unable to login with correct credentials.',
+    status: TicketStatus.OPEN,
+    priority: TicketPriority.HIGH,
+    assignedTo: 1,
+    comments: [],
+    createdAt: new Date('2025-07-20T10:00:00Z'),
+    updatedAt: new Date('2025-07-20T10:00:00Z'),
+  },
+  {
+    id: 2,
+    userId: 2,
+    engagementId: 1,
+    subject: 'Broken link on dashboard',
+    description: 'Link to analytics page not working.',
+    status: TicketStatus.IN_PROGRESS,
+    priority: TicketPriority.MEDIUM,
+    assignedTo: 3,
+    comments: [],
+    createdAt: new Date('2025-07-19T15:00:00Z'),
+    updatedAt: new Date('2025-07-19T16:00:00Z'),
+  },
+  {
+    id: 3,
+    userId: 3,
+    engagementId: 1,
+    subject: 'UI glitch on dashboard',
+    description: 'Some charts are not rendering correctly.',
+    status: TicketStatus.IN_PROGRESS,
+    priority: TicketPriority.MEDIUM,
+    assignedTo: 2,
+    comments: [],
+    createdAt: new Date('2025-07-20T10:00:00Z'),
+    updatedAt: new Date('2025-07-20T10:00:00Z'),
+  },
+];
