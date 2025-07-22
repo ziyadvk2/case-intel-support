@@ -4,9 +4,10 @@ import toast from 'react-hot-toast';
 
 interface Props {
   onCreate: (ticket: Ticket) => void;
+  onClose?:()=> void;
 }
 
-const CreateTicketForm: React.FC<Props> = ({ onCreate }) => {
+const CreateTicketForm: React.FC<Props> = ({ onCreate,onClose }) => {
   const [subject, setSubject] = useState('');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState<TicketPriority>(TicketPriority.MEDIUM);
@@ -47,6 +48,7 @@ const CreateTicketForm: React.FC<Props> = ({ onCreate }) => {
     setAssignedTo(0);
     setUserId(0);
     setEngagementId(0);
+    onClose?.();
   };
 
   return (
